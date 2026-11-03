@@ -9,7 +9,7 @@ TP integrador de Redes Neuronales. El usuario escribe en lenguaje natural (ej. _
 | **Subastas**    | Redacta el título y la descripción de la publicación, la guarda en la base cuando se aprueba y lista las subastas activas |
 | **Validador**   | Revisa que la publicación cumpla los requisitos; si no, vuelve a Subastas                                                 |
 
-El diseño completo y el diagrama están en [docs/diagrama.md](docs/diagrama.md), y el informe del trabajo en [docs/Informe_TP_Integrador.pdf](docs/Informe_TP_Integrador.pdf).
+El diseño completo y el diagrama están en [docs/diagrama.md](docs/diagrama.md).
 
 ## Instalación
 
@@ -83,7 +83,6 @@ Si la cuota diaria no alcanza, se pueden repartir los casos entre varias API key
 ```
 data/create_db.py      Crea la base SQLite con subastas de referencia (la tabla de subastas creadas la arma src/db.py)
 docs/diagrama.md       Diseño: agentes, estado compartido y diagrama
-docs/Informe_TP_Integrador.*  Informe del trabajo (Word y PDF)
 src/main.py            Punto de entrada
 src/graph.py           Grafo de LangGraph: nodos, aristas y routers
 src/state.py           Estado compartido entre agentes
