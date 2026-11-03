@@ -1,0 +1,718 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "date": "2026-10-29T19:50:45",
+  "runs": [
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5",
+        "category": "consoles",
+        "condition": "used",
+        "details": "Con 2 joysticks, poco uso"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "suggested_price": 465000,
+      "draft": {
+        "title": "PlayStation 5 con 2 joysticks",
+        "description": "¡Aprovechá esta oportunidad! Pongo en subasta mi PlayStation 5. Viene con 2 joysticks y la usé poco. Consultá cualquier duda que tengas sobre la consola antes de ofertar.",
+        "category": "consoles",
+        "starting_price": 465000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 con 2 joysticks\n  ¡Aprovechá esta oportunidad! Pongo en subasta mi PlayStation 5. Viene con 2 joysticks y la usé poco. Consultá cualquier duda que tengas sobre la consola antes de ofertar.\n  Precio base: $465.000\n  Duración: 7 días\n\nTu PlayStation 5 corresponde a la versión Standard usada. Seleccioné los candidatos 1, 2, 3 y 5 que corresponden al mismo modelo y condición, descartando la versión Digital (id 6) y la que tiene detalles estéticos importantes (id 4). Tu consola debería ubicarse hacia la parte alta del rango de estos comparables debido a que incluís un joystick adicional, sumando valor frente a las unidades que traían solo uno.",
+      "error": null,
+      "seconds": 24.97,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "ps5_sin_precio",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Apple iPhone 13",
+        "category": "phones",
+        "condition": "used",
+        "details": "128GB, batería al 85%"
+      },
+      "user_price": 600000,
+      "comparable_ids": [
+        11,
+        12
+      ],
+      "suggested_price": 525000,
+      "draft": {
+        "title": "Apple iPhone 13 128GB",
+        "description": "¡Aprovechá esta oportunidad para ofertar! Pongo en subasta mi Apple iPhone 13. El equipo cuenta con 128GB de almacenamiento y la batería se encuentra al 85%. Ideal para renovar tu teléfono. Sumate a la subasta y llevatelo.",
+        "category": "phones",
+        "starting_price": 600000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Apple iPhone 13 128GB\n  ¡Aprovechá esta oportunidad para ofertar! Pongo en subasta mi Apple iPhone 13. El equipo cuenta con 128GB de almacenamiento y la batería se encuentra al 85%. Ideal para renovar tu teléfono. Sumate a la subasta y llevatelo.\n  Precio base: $600.000\n  Duración: 7 días\n\nTu iPhone 13 de 128GB es usado y tiene la batería al 85%, por lo que los candidatos 11 y 12 son perfectamente comparables al ser exactamente el mismo modelo y estado similar. El candidato 13 es un iPhone 14 y el 18 es un Xiaomi, por lo que fueron descartados. Tu precio de 600000 está un poco por encima del rango de las ventas pasadas (que van de 500000 a 550000), pero tu porcentaje de batería está justo en el medio de ambos, así que tu valor es competitivo.\n\nLos 600000 que pedís están ligeramente por encima de los precios de cierre de los candidatos comparables (500000 y 550000), pero tu estado de batería (85%) justifica apuntar alto en el rango.",
+      "error": null,
+      "seconds": 24.58,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "iphone13_con_precio",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "MacBook Air M1",
+        "category": "laptops",
+        "condition": null,
+        "details": "8GB y 256GB"
+      },
+      "user_price": 720000,
+      "comparable_ids": [
+        19,
+        20
+      ],
+      "suggested_price": 725000,
+      "draft": {
+        "title": "Subasta MacBook Air M1 8GB 256GB",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1 de 8GB y 256GB. Hacé tu oferta ahora mismo y llevate este equipo. No te lo pierdas.",
+        "category": "laptops",
+        "starting_price": 720000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Subasta MacBook Air M1 8GB 256GB\n  Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1 de 8GB y 256GB. Hacé tu oferta ahora mismo y llevate este equipo. No te lo pierdas.\n  Precio base: $720.000\n  Duración: 7 días\n\nTu MacBook Air M1 de 8GB y 256GB se comparó con las subastas 19 y 20, que corresponden exactamente al mismo modelo y configuración. La candidata 21 fue descartada por ser el modelo M2. Como no especificaste la condición de tu equipo, asumimos un estado usado similar al de los comparables; si se encuentra impecable y sin detalles como el golpe de la 20, tu producto debería ubicarse en la parte alta o por encima del rango.\n\nLos 720000 que pedís están muy bien alineados con el mercado actual, ubicándose justo entre la subasta con detalles (700000) y la que tiene cargador original y menor desgaste (750000).",
+      "error": null,
+      "seconds": 19.32,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "macbook_con_precio",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "Venzo Mountain Bike Rodado 29",
+        "category": "bicycles",
+        "condition": "used",
+        "details": null
+      },
+      "user_price": null,
+      "comparable_ids": [
+        34,
+        35
+      ],
+      "suggested_price": 400000,
+      "draft": {
+        "title": "Mountain Bike Venzo Rodado 29 Usada",
+        "description": "¡Aprovechá esta oportunidad única para ofertar! Pongo en subasta mi mountain bike Venzo rodado 29, en condición usada. Ideal para quienes buscan un rodado de estas características. Sumate a la subasta y hacé tu oferta antes de que termine.",
+        "category": "bicycles",
+        "starting_price": 400000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Mountain Bike Venzo Rodado 29 Usada\n  ¡Aprovechá esta oportunidad única para ofertar! Pongo en subasta mi mountain bike Venzo rodado 29, en condición usada. Ideal para quienes buscan un rodado de estas características. Sumate a la subasta y hacé tu oferta antes de que termine.\n  Precio base: $400.000\n  Duración: 7 días\n\nTu bicicleta es una Venzo de rodado 29 usada, sin especificar modelo exacto. Por eso, seleccioné como comparables las bicicletas Venzo Raptor y Loki (IDs 34 y 35), ambas rodado 29 y en condición usada. Las demás opciones se descartaron por ser de otra marca, tipo o rodado. Tu producto debería ubicarse dentro del rango de los candidatos seleccionados, dependiendo del estado de transmisión y componentes específicos.",
+      "error": null,
+      "seconds": 35.44,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "bici_venzo_sin_precio",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Catan",
+        "category": "other",
+        "condition": null,
+        "details": "completo"
+      },
+      "user_price": 40000,
+      "comparable_ids": [],
+      "suggested_price": null,
+      "draft": {
+        "title": "Juego de mesa Catan completo",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta de mi juego de mesa Catan. Se encuentra completo tal como se puede ver. Ideal para compartir y pasar un gran momento. ¡Hacé tu oferta antes de que termine!",
+        "category": "other",
+        "starting_price": 40000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Juego de mesa Catan completo\n  Aprovechá esta oportunidad y sumate a la subasta de mi juego de mesa Catan. Se encuentra completo tal como se puede ver. Ideal para compartir y pasar un gran momento. ¡Hacé tu oferta antes de que termine!\n  Precio base: $40.000\n  Duración: 7 días\n\nNo hay subastas similares en la base de datos.",
+      "error": null,
+      "seconds": 18.43,
+      "llm_calls": 3,
+      "judge_invented": [],
+      "case": "catan_con_precio",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5 Standard",
+        "category": "consoles",
+        "condition": "used",
+        "details": "con un joystick"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "suggested_price": 450000,
+      "draft": {
+        "title": "PlayStation 5 Standard Usada",
+        "description": "Aprovechá esta oportunidad para ofertar por una PlayStation 5 Standard usada. La consola viene con un joystick incluido. No te pierdas la chance de llevártela en esta subasta.",
+        "category": "consoles",
+        "starting_price": 450000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 Standard Usada\n  Aprovechá esta oportunidad para ofertar por una PlayStation 5 Standard usada. La consola viene con un joystick incluido. No te pierdas la chance de llevártela en esta subasta.\n  Precio base: $450.000\n  Duración: 7 días\n\nTu PlayStation 5 Standard usada con un joystick coincide exactamente con el modelo de los candidatos 1, 2, 3, 4 y 5. Descarté el candidato 6 porque es la versión Digital sin lectora. Como tu consola incluye un solo joystick básico, tu precio debería ubicarse en el rango medio-bajo de los comparables, especialmente si no tiene detalles estéticos o caja original.",
+      "error": null,
+      "seconds": 24.28,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "multiturno_ps5",
+      "system": "multi",
+      "rep": 1
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5",
+        "category": "consoles",
+        "condition": "used",
+        "details": "Con 2 joysticks, poco uso"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "suggested_price": 450000,
+      "draft": {
+        "title": "PlayStation 5 con 2 joysticks",
+        "description": "Aprovechá esta oportunidad para ofertar por esta PlayStation 5. Viene con 2 joysticks y tiene poco uso. Sumá esta consola a tu colección y empezá a jugar ahora. ¡Hacé tu oferta en la subasta!",
+        "category": "consoles",
+        "starting_price": 450000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 con 2 joysticks\n  Aprovechá esta oportunidad para ofertar por esta PlayStation 5. Viene con 2 joysticks y tiene poco uso. Sumá esta consola a tu colección y empezá a jugar ahora. ¡Hacé tu oferta en la subasta!\n  Precio base: $450.000\n  Duración: 7 días\n\nTu PlayStation 5 corresponde al modelo Standard (asumido como el estándar de mercado frente a la falta de especificación entre Standard y Digital). Se seleccionaron los candidatos del 1 al 5 por ser también PlayStation 5 Standard usadas, descartando la versión Digital (id 6). Tu consola incluye dos joysticks y está en buen estado (poco uso), por lo que tu precio debería ubicarse hacia la parte alta del rango definido por estos comparables.",
+      "error": null,
+      "seconds": 50.93,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "ps5_sin_precio",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Apple iPhone 13",
+        "category": "phones",
+        "condition": "used",
+        "details": "128GB, batería al 85%"
+      },
+      "user_price": 600000,
+      "comparable_ids": [
+        11,
+        12
+      ],
+      "suggested_price": 525000,
+      "draft": {
+        "title": "Apple iPhone 13 128GB",
+        "description": "¡Aprovechá esta oportunidad para ofertar! Pongo en subasta mi Apple iPhone 13 usado. Cuenta con capacidad de 128GB y la batería se encuentra al 85%. Sumate a la subasta y llevátelo.",
+        "category": "phones",
+        "starting_price": 600000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Apple iPhone 13 128GB\n  ¡Aprovechá esta oportunidad para ofertar! Pongo en subasta mi Apple iPhone 13 usado. Cuenta con capacidad de 128GB y la batería se encuentra al 85%. Sumate a la subasta y llevátelo.\n  Precio base: $600.000\n  Duración: 7 días\n\nTu iPhone 13 de 128GB usado es comparable con las subastas 11 y 12, que corresponden al mismo modelo y condición de uso. Descarté el iPhone 14 por ser de otra generación y el Xiaomi por ser de otra marca. Con tu batería al 85%, tu equipo se ubica muy bien dentro de ese rango de precios.\n\nLos 600.000 que pedís están un poco por encima del precio de cierre de los candidatos comparables (que rondan entre 500.000 y 550.000), pero tu porcentaje de batería está equilibrado respecto a ellos, por lo que es una pretensión cercana al mercado actual.",
+      "error": null,
+      "seconds": 23.95,
+      "llm_calls": 4,
+      "judge_invented": [
+        "El producto se encuentra en estado usado."
+      ],
+      "case": "iphone13_con_precio",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "MacBook Air M1",
+        "category": "laptops",
+        "condition": null,
+        "details": "8GB y 256GB"
+      },
+      "user_price": 720000,
+      "comparable_ids": [
+        19,
+        20
+      ],
+      "suggested_price": 725000,
+      "draft": {
+        "title": "Subasta de MacBook Air M1 8GB y 256GB",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1 de 8GB y 256GB. Hacé tu oferta ahora y llevátela.",
+        "category": "laptops",
+        "starting_price": 720000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Subasta de MacBook Air M1 8GB y 256GB\n  Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1 de 8GB y 256GB. Hacé tu oferta ahora y llevátela.\n  Precio base: $720.000\n  Duración: 7 días\n\nTu MacBook Air M1 coincide exactamente con los candidatos 19 y 20, que corresponden al mismo procesador y capacidad (8GB/256GB). Descarté el candidato 21 porque es una MacBook Air M2, un modelo superior. Tu precio pedido de 720000 se ubica muy bien dentro del rango de mercado establecido por estas ventas anteriores, entre 700000 y 750000.\n\nTu precio de 720000 es razonable y está muy alineado con el mercado actual para este modelo usado.",
+      "error": null,
+      "seconds": 23.96,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "macbook_con_precio",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "Venzo Mountain Bike Rodado 29",
+        "category": "bicycles",
+        "condition": "used",
+        "details": null
+      },
+      "user_price": null,
+      "comparable_ids": [
+        34,
+        35
+      ],
+      "suggested_price": 400000,
+      "draft": {
+        "title": "Mountain Bike Venzo Rodado 29 Usada",
+        "description": "Aprovechá esta oportunidad para ofertar por esta mountain bike Venzo rodado 29. El producto se encuentra en condición usada. No te pierdas la chance de llevártela en esta subasta.",
+        "category": "bicycles",
+        "starting_price": 400000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Mountain Bike Venzo Rodado 29 Usada\n  Aprovechá esta oportunidad para ofertar por esta mountain bike Venzo rodado 29. El producto se encuentra en condición usada. No te pierdas la chance de llevártela en esta subasta.\n  Precio base: $400.000\n  Duración: 7 días\n\nTu bicicleta es una Venzo Mountain Bike rodado 29 usada. No especificaste el modelo exacto dentro de la marca, así que seleccioné los candidatos de Venzo rodado 29 usados (Raptor y Loki) que son equivalentes directos. Descarté marcas distintas como Topmega, Fire Bird, Olmo y Raleigh ya que apuntan a otro segmento o tipo de bicicleta. Tu precio final debería ubicarse dentro del rango de estos candidatos.",
+      "error": null,
+      "seconds": 23.94,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "bici_venzo_sin_precio",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Catan",
+        "category": "other",
+        "condition": null,
+        "details": "completo"
+      },
+      "user_price": 40000,
+      "comparable_ids": [],
+      "suggested_price": null,
+      "draft": {
+        "title": "Juego de mesa Catan completo",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta de mi juego de mesa Catan. Se encuentra completo, listo para que ofertes y disfrutes con familia o amigos. No te pierdas la chance de llevártelo.",
+        "category": "other",
+        "starting_price": 40000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Juego de mesa Catan completo\n  Aprovechá esta oportunidad y sumate a la subasta de mi juego de mesa Catan. Se encuentra completo, listo para que ofertes y disfrutes con familia o amigos. No te pierdas la chance de llevártelo.\n  Precio base: $40.000\n  Duración: 7 días\n\nNo hay subastas similares en la base de datos.",
+      "error": null,
+      "seconds": 18.33,
+      "llm_calls": 3,
+      "judge_invented": [],
+      "case": "catan_con_precio",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5 Standard",
+        "category": "consoles",
+        "condition": "used",
+        "details": "con un joystick"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "suggested_price": 450000,
+      "draft": {
+        "title": "PlayStation 5 Standard Usada",
+        "description": "Aprovechá esta oportunidad para ofertar por esta PlayStation 5 Standard usada. El producto incluye un joystick. No te pierdas la chance de llevártela en esta subasta.",
+        "category": "consoles",
+        "starting_price": 450000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 Standard Usada\n  Aprovechá esta oportunidad para ofertar por esta PlayStation 5 Standard usada. El producto incluye un joystick. No te pierdas la chance de llevártela en esta subasta.\n  Precio base: $450.000\n  Duración: 7 días\n\nTu PlayStation 5 Standard usada con un joystick es comparable con los candidatos del 1 al 5, ya que todos corresponden al mismo modelo estándar. Descarté el candidato 6 porque es la versión Digital sin lectora de discos. Tu consola debería ubicarse dentro del rango de los comparables elegidos, dependiendo de su estado estético general y si conservás la caja original.",
+      "error": null,
+      "seconds": 24.38,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "multiturno_ps5",
+      "system": "multi",
+      "rep": 2
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5",
+        "category": "consoles",
+        "condition": "used",
+        "details": "Con 2 joysticks, poco uso"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "suggested_price": 450000,
+      "draft": {
+        "title": "PlayStation 5 con 2 joysticks",
+        "description": "¡Aprovechá esta oportunidad! Pongo en subasta mi PlayStation 5. Viene con 2 joysticks y la usé poco. Consultá cualquier duda que tengas antes de ofertar.",
+        "category": "consoles",
+        "starting_price": 450000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 con 2 joysticks\n  ¡Aprovechá esta oportunidad! Pongo en subasta mi PlayStation 5. Viene con 2 joysticks y la usé poco. Consultá cualquier duda que tengas antes de ofertar.\n  Precio base: $450.000\n  Duración: 7 días\n\nTu PlayStation 5 se asume como la versión Standard con lectora. Para el análisis seleccioné los candidatos de la versión Standard (1, 2, 3, 4 y 5), descartando la versión Digital (6). Tu consola debería ubicarse en la parte alta del rango de estos comparables debido a que incluye 2 joysticks y se encuentra en buen estado (poco uso).",
+      "error": null,
+      "seconds": 24.17,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "ps5_sin_precio",
+      "system": "multi",
+      "rep": 3
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Apple iPhone 13",
+        "category": "phones",
+        "condition": "used",
+        "details": "128GB, batería al 85%"
+      },
+      "user_price": 600000,
+      "comparable_ids": [
+        11,
+        12
+      ],
+      "suggested_price": 525000,
+      "draft": {
+        "title": "Apple iPhone 13 128GB Batería 85%",
+        "description": "Aprovechá esta oportunidad para ofertar por mi Apple iPhone 13. El equipo cuenta con 128GB de almacenamiento y la batería se encuentra al 85%. Sumate a la subasta y hacé tu oferta.",
+        "category": "phones",
+        "starting_price": 600000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Apple iPhone 13 128GB Batería 85%\n  Aprovechá esta oportunidad para ofertar por mi Apple iPhone 13. El equipo cuenta con 128GB de almacenamiento y la batería se encuentra al 85%. Sumate a la subasta y hacé tu oferta.\n  Precio base: $600.000\n  Duración: 7 días\n\nTu iPhone 13 de 128GB es usado y tiene la batería al 85%, por lo que los candidatos 11 y 12 son perfectamente comparables al ser exactamente el mismo modelo y tener condiciones similares de batería y uso. El candidato 13 corresponde a un iPhone 14 y el 18 a un Xiaomi, por lo que fueron descartados. Tu producto debería ubicarse dentro del rango de los candidatos seleccionados.\n\nLos 600,000 que pedís están un poco por encima de los precios de cierre de los candidatos comparables (que rondan entre 500,000 y 550,000), pero tu porcentaje de batería está justo en el medio, por lo que es un precio competitivo que podría funcionar.",
+      "error": null,
+      "seconds": 23.86,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "iphone13_con_precio",
+      "system": "multi",
+      "rep": 3
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "MacBook Air M1 8GB 256GB",
+        "category": "laptops",
+        "condition": null,
+        "details": "8GB y 256GB"
+      },
+      "user_price": 720000,
+      "comparable_ids": [
+        19,
+        20
+      ],
+      "suggested_price": 725000,
+      "draft": {
+        "title": "MacBook Air M1 8GB 256GB",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1. El equipo cuenta con 8GB de memoria RAM y 256GB de almacenamiento. Ideal para renovar tus herramientas de trabajo o estudio. No dejes pasar esta gran chance de ofertar y llevártela.",
+        "category": "laptops",
+        "starting_price": 720000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  MacBook Air M1 8GB 256GB\n  Aprovechá esta oportunidad y sumate a la subasta de mi MacBook Air M1. El equipo cuenta con 8GB de memoria RAM y 256GB de almacenamiento. Ideal para renovar tus herramientas de trabajo o estudio. No dejes pasar esta gran chance de ofertar y llevártela.\n  Precio base: $720.000\n  Duración: 7 días\n\nTu MacBook Air M1 8GB 256GB coincide exactamente con los candidatos 19 y 20, que son del mismo modelo. Descarté el candidato 21 por ser un chip M2 y el resto por ser otras marcas. Como no especificaste el estado de tu equipo, tu precio de 720000 se ubica muy bien en el rango de estos comparables usados (entre 700000 y 750000).\n\nTu precio pedido de 720000 está muy bien alineado con el mercado actual para una MacBook Air M1 usada, ubicándose justo en el medio del rango de los candidatos comparables.",
+      "error": null,
+      "seconds": 24.02,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "macbook_con_precio",
+      "system": "multi",
+      "rep": 3
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "Venzo Rodado 29",
+        "category": "bicycles",
+        "condition": "used",
+        "details": "Mountain bike"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        34,
+        35
+      ],
+      "suggested_price": 400000,
+      "draft": {
+        "title": "Mountain Bike Venzo Rodado 29 Usada",
+        "description": "Aprovechá esta oportunidad para ofertar por esta mountain bike Venzo rodado 29, usada. Ideal para sumar a tus próximas salidas y recorrer distintos caminos. Sumate a la subasta y llevatela.",
+        "category": "bicycles",
+        "starting_price": 400000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Mountain Bike Venzo Rodado 29 Usada\n  Aprovechá esta oportunidad para ofertar por esta mountain bike Venzo rodado 29, usada. Ideal para sumar a tus próximas salidas y recorrer distintos caminos. Sumate a la subasta y llevatela.\n  Precio base: $400.000\n  Duración: 7 días\n\nTu bicicleta Venzo de rodado 29 es una mountain bike usada. Como no especificaste el modelo exacto, seleccioné candidatos de la misma marca y categoría (Venzo Raptor y Venzo Loki) que también son usados y rodado 29. Tu precio final dependerá de los componentes específicos que tenga tu cuadro.",
+      "error": null,
+      "seconds": 23.65,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "bici_venzo_sin_precio",
+      "system": "multi",
+      "rep": 3
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_with_price",
+      "product": {
+        "name": "Catan",
+        "category": "other",
+        "condition": null,
+        "details": "completo"
+      },
+      "user_price": 40000,
+      "comparable_ids": [],
+      "suggested_price": null,
+      "draft": {
+        "title": "Juego de mesa Catan completo",
+        "description": "Aprovechá esta oportunidad y sumate a la subasta. Pongo a la venta mi juego de mesa Catan, el cual se encuentra completo. Ideal para pasar buenos momentos y divertirse en familia o con amigos. Hacé tu oferta y llevátelo.",
+        "category": "other",
+        "starting_price": 40000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  Juego de mesa Catan completo\n  Aprovechá esta oportunidad y sumate a la subasta. Pongo a la venta mi juego de mesa Catan, el cual se encuentra completo. Ideal para pasar buenos momentos y divertirse en familia o con amigos. Hacé tu oferta y llevátelo.\n  Precio base: $40.000\n  Duración: 7 días\n\nNo hay subastas similares en la base de datos.",
+      "error": null,
+      "seconds": 17.91,
+      "llm_calls": 3,
+      "judge_invented": [],
+      "case": "catan_con_precio",
+      "system": "multi",
+      "rep": 3
+    },
+    {
+      "path": [
+        "coordinator",
+        "analyst",
+        "auction",
+        "validator"
+      ],
+      "intent": "create_auction_no_price",
+      "product": {
+        "name": "PlayStation 5 Standard",
+        "category": "consoles",
+        "condition": "used",
+        "details": "Con un joystick"
+      },
+      "user_price": null,
+      "comparable_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "suggested_price": 450000,
+      "draft": {
+        "title": "PlayStation 5 Standard Usada",
+        "description": "Aprovechá esta oportunidad para ofertar por una PlayStation 5 Standard usada. El producto incluye un joystick. Todo tal cual se detalla, listo para sumar a tus momentos de entretenimiento. No te pierdas la chance de llevártela en esta subasta.",
+        "category": "consoles",
+        "starting_price": 450000,
+        "duration_days": 7
+      },
+      "rejected_draft": null,
+      "retries": 1,
+      "validation_issues": [],
+      "answer": "¡Listo! Esta es tu subasta:\n\n  PlayStation 5 Standard Usada\n  Aprovechá esta oportunidad para ofertar por una PlayStation 5 Standard usada. El producto incluye un joystick. Todo tal cual se detalla, listo para sumar a tus momentos de entretenimiento. No te pierdas la chance de llevártela en esta subasta.\n  Precio base: $450.000\n  Duración: 7 días\n\nTu PlayStation 5 Standard usada se compara perfectamente con las otras consolas Standard del listado (descartando la versión Digital). Usamos los candidatos 1, 2, 3, 4 y 5. Como tu consola incluye un joystick y no se especifican detalles adicionales sobre su estética o caja, tu precio debería ubicarse en el rango medio-bajo de esos resultados, dependiendo de si tenés la caja o la querés vender más rápido.",
+      "error": null,
+      "seconds": 23.86,
+      "llm_calls": 4,
+      "judge_invented": [],
+      "case": "multiturno_ps5",
+      "system": "multi",
+      "rep": 3
+    }
+  ]
+}

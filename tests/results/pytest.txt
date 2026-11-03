@@ -1,0 +1,49 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\juanp\facu\TP-RN-UP\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\juanp\facu\TP-RN-UP
+plugins: anyio-4.15.1, langsmith-0.14.11
+collecting ... collected 40 items
+
+tests/test_auctions.py::test_saved_auction_is_listed_with_its_data PASSED [  2%]
+tests/test_auctions.py::test_finished_auctions_are_not_listed PASSED     [  5%]
+tests/test_auctions.py::test_list_filters_by_category_and_orders_by_end PASSED [  7%]
+tests/test_auctions.py::test_list_is_safe_against_sql_injection PASSED   [ 10%]
+tests/test_flow.py::test_off_topic_ends_at_coordinator PASSED            [ 12%]
+tests/test_flow.py::test_missing_info_asks_for_product PASSED            [ 15%]
+tests/test_flow.py::test_price_query_ends_at_analyst PASSED              [ 17%]
+tests/test_flow.py::test_create_auction_full_path PASSED                 [ 20%]
+tests/test_flow.py::test_analyst_discards_non_comparables PASSED         [ 22%]
+tests/test_flow.py::test_analyst_ignores_ids_not_in_candidates PASSED    [ 25%]
+tests/test_flow.py::test_no_data_and_no_price_asks_user PASSED           [ 27%]
+tests/test_flow.py::test_no_data_but_user_price_continues PASSED         [ 30%]
+tests/test_flow.py::test_rejected_draft_is_fixed_on_retry PASSED         [ 32%]
+tests/test_flow.py::test_llm_validator_rejects_invented_features PASSED  [ 35%]
+tests/test_flow.py::test_retries_are_limited PASSED                      [ 37%]
+tests/test_flow.py::test_list_auctions_goes_to_auction_without_llm PASSED [ 40%]
+tests/test_flow.py::test_list_auctions_empty_category PASSED             [ 42%]
+tests/test_flow.py::test_intent_without_product_becomes_missing_info PASSED [ 45%]
+tests/test_flow.py::test_intent_label_is_fixed_by_price PASSED           [ 47%]
+tests/test_flow.py::test_history_is_sent_to_coordinator PASSED           [ 50%]
+tests/test_flow.py::test_auction_and_validator_see_original_message PASSED [ 52%]
+tests/test_rules.py::test_search_filters_by_category_and_keyword PASSED  [ 55%]
+tests/test_rules.py::test_search_without_keywords_returns_whole_category PASSED [ 57%]
+tests/test_rules.py::test_search_other_category_has_no_products PASSED   [ 60%]
+tests/test_rules.py::test_search_is_safe_against_sql_injection PASSED    [ 62%]
+tests/test_rules.py::test_price_stats_uses_median_not_mean PASSED        [ 65%]
+tests/test_rules.py::test_price_stats_even_count PASSED                  [ 67%]
+tests/test_rules.py::test_price_stats_empty PASSED                       [ 70%]
+tests/test_rules.py::test_valid_draft_has_no_issues PASSED               [ 72%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change0-t\xedtulo tiene 3 caracteres] PASSED [ 75%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change1-t\xedtulo tiene 81 caracteres] PASSED [ 77%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change2-descripci\xf3n tiene 9 caracteres] PASSED [ 80%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change3-categor\xeda 'autos' no es v\xe1lida] PASSED [ 82%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change4-mayor a 0] PASSED [ 85%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change5-entre 1 y 14 d\xedas] PASSED [ 87%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change6-Falta el campo 'title'] PASSED [ 90%]
+tests/test_rules.py::test_invalid_drafts_are_rejected[change7-Falta el campo 'starting_price'] PASSED [ 92%]
+tests/test_rules.py::test_starting_price_prefers_user_price PASSED       [ 95%]
+tests/test_rules.py::test_starting_price_falls_back_to_suggested PASSED  [ 97%]
+tests/test_rules.py::test_starting_price_never_invented PASSED           [100%]
+
+============================= 40 passed in 2.19s ==============================
